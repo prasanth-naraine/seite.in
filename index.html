@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seite</title>
 
+    <!-- cdn -->
+    <link rel="stylesheet" href="./fa/fa.css">
+
     <!-- style css -->
     <link rel="stylesheet" href="./styling.css">
 
@@ -20,14 +23,40 @@
 
 <body>
 
+    <!-- navbar -->
+    <div class="navbar">
+        <a href="./" class="navbar-logo">
+            <img src="./logo/l-1.png" alt="logo">
+        </a>
 
-    <div class="navbar-main">
-        <img src="./logo/l-1.png" alt="logo">
+        <div class="navbar-clickable">
+            <i class="fa-solid fa-gear hamIcon"></i>
+            <i class="fa-solid fa-close closeIcon"></i>
+        </div>
+
+        <div class="responsive-lap-mobile">
+            <div class="navbar-menu">
+                <a href="./" class="active2">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./blogs.html">Blogs</a>
+                <a href="./pricing.html">Pricing</a>
+                <a href="./contact.html" id="stopp">Contact</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="navbar-adjuster"></div>
+
+
+    <!-- Fixed top container for the progress tracker -->
+    <div class="progress-container overflow-control">
+        <div class="progress-bar" id="myProgressBar"></div>
     </div>
 
 </body>
 
 <!-- js codes -->
+<script src="./fa/fa.js"></script>
 <script src="./magic.js"></script>
 
 </html>
