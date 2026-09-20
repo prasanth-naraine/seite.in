@@ -11,12 +11,15 @@
     font-family: "Valley Sans", sans-serif;
     font-size: 18px;
     color: var(--text1);
-    letter-spacing: -3%;
+    letter-spacing: -5% !important;
 }
 
+html,
 body {
     background-color: #fff;
-    height: 500vh;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -24,7 +27,7 @@ body::-webkit-scrollbar {
 }
 
 /* anchor tags */
-.navbar a {
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -67,6 +70,10 @@ body::-webkit-scrollbar {
     }
 }
 
+/* fake-height */
+.fake-height {
+    height: 500vh;
+}
 
 /* --------------------- */
 /* navbar */
@@ -90,7 +97,7 @@ body::-webkit-scrollbar {
 .navbar-adjuster {
     display: block;
     position: relative;
-    height: 60px;
+    height: 65px;
 }
 
 .navbar-clickable {
@@ -263,5 +270,122 @@ body::-webkit-scrollbar {
     .navbar-clickable.active .closeIcon {
         opacity: 1;
         transform: rotate(0deg);
+    }
+}
+
+/* ---------------------- */
+/* Footer */
+
+.footer {
+    display: flex;
+    padding: 3rem 15% 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    border-top: 2px solid var(--white2);
+}
+
+.footer-1 img {
+    height: 100px;
+}
+
+.footer-2,
+.footer-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer-2 .head,
+.footer-3 .head {
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.footer-2 .lists,
+.footer-3 .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 5%;
+}
+
+.footer-2 .lists a,
+.footer-3 .lists a {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.footer-4 {
+    display: flex;
+    gap: .5rem;
+}
+
+.footer-4 a {
+    background: var(--linear1);
+    height: max-content;
+    padding: .5rem;
+    border-radius: 1.25rem;
+}
+
+.company-footer {
+    padding: 0 15%;
+    display: flex;
+    justify-content: center;
+    /* background: var(--white2); */
+    margin : 0rem !important;
+    overflow: hidden;
+}
+
+.company-footer h2 {
+    font-size: 17vw;
+    opacity: 0.1;
+    line-height: 1;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding-inline: 5%;
+    }
+
+    .footer-2 .head,
+    .footer-3 .head {
+        font-size: 1.5rem;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .footer-2 .head,
+    .footer-3 .head {
+        font-size: 1.25rem;
+    }
+
+    .footer-1,
+    .footer-4 {
+        min-width: 100%;
+    }
+
+    .footer-2 .lists,
+    .footer-3 .lists {
+        gap: .75rem;
+        padding-left: 4px;
+    }
+
+    .footer-2,
+    .footer-3 {
+        min-width: calc(50% - .75rem);
+        gap: .75rem;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 2rem 5% 1.5rem;
+    }
+
+    .company-footer h2 {
+        font-size: 22vw;
     }
 }
