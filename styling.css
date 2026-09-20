@@ -38,7 +38,8 @@ a {
     --gamma: #82f0ff;
 
     --text1: #191c20;
-    --white2: #f7ebeb;
+    --white2: #fff;
+    --gray3: #e6e0e0;
 
     --linear1: linear-gradient(270deg, var(--alpha) 0%, var(--beta) 50%, var(--gamma) 100%);
 
@@ -51,8 +52,8 @@ a {
     top: 61px;
     left: 0%;
     width: 100%;
-    height: 6px;
-    background-color: var(--white2);
+    height: 4px;
+    background: var(--gray3);
     z-index: 1000 !important;
 }
 
@@ -89,7 +90,6 @@ a {
     align-items: center !important;
     justify-content: space-between !important;
     padding: .65rem 15%;
-    border-bottom: 1px solid var(--white2);
     position: fixed;
     z-index: 1000 !important;
 }
@@ -180,7 +180,7 @@ a {
         border-radius: 0rem;
         z-index: 1000 !important;
         max-height: 100dvh;
-        background: var(--white1);
+        background: var(--white2) !important;
         padding-inline: 5%;
         padding-top: 85px;
         justify-content: flex-start;
@@ -188,7 +188,7 @@ a {
     }
 
     .navbar .navbar-menu a {
-        border: 1px solid var(--white2);
+        border: 1px solid var(--gray3);
         width: 100%;
         text-align: center;
         padding: .75rem .5rem;
@@ -281,7 +281,7 @@ a {
     padding: 3rem 15% 2rem;
     gap: 2rem;
     justify-content: space-between;
-    border-top: 2px solid var(--white2);
+    border-top: 1px solid var(--gray3);
 }
 
 .footer-1 img {
@@ -331,7 +331,6 @@ a {
     padding: 0 15%;
     display: flex;
     justify-content: center;
-    /* background: var(--white2); */
     margin : 0rem !important;
     overflow: hidden;
 }
