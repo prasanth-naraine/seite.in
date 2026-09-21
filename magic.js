@@ -44,3 +44,50 @@ function raf(time) {
     requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+
+
+// ---------------------------------------
+// faq
+const faqItems = document.querySelectorAll(".q-a-div");
+
+const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
+faqItems.forEach(item => {
+
+    // Hover Open (Desktop only)
+    if (!isTouchDevice) {
+
+        item.addEventListener("mouseenter", () => {
+            faqItems.forEach(el => {
+                if (el !== item) {
+                    el.classList.remove("active");
+                }
+            });
+
+            item.classList.add("active");
+        });
+
+
+        item.addEventListener("mouseleave", () => {
+            item.classList.remove("active");
+        });
+
+    }
+
+
+    // Click Toggle (Desktop + Mobile)
+    item.addEventListener("click", () => {
+
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach(el => {
+            el.classList.remove("active");
+        });
+
+        if (!isActive) {
+            item.classList.add("active");
+        }
+
+    });
+
+});
