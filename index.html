@@ -1,136 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Seite</title>
 
     <!-- cdn -->
-    <link rel="stylesheet" href="./fa/fa.css">
+    <link rel="stylesheet" href="./cdn/fa.css" />
+    <link rel="stylesheet" href="./cdn/aos.css" />
 
     <!-- style css -->
-    <link rel="stylesheet" href="./styling.css">
+    <link rel="stylesheet" href="./styling.css" />
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- navbar -->
     <div class="navbar">
-        <a href="./" class="navbar-logo">
-            <img src="./logo/l-1.png" alt="logo">
-        </a>
+      <a href="./" class="navbar-logo">
+        <img src="./logo/l-1.png" alt="logo" />
+      </a>
 
-        <div class="navbar-clickable">
-            <i class="fa-solid fa-gear hamIcon"></i>
-            <i class="fa-solid fa-close closeIcon"></i>
+      <div class="navbar-clickable">
+        <i class="fa-solid fa-gear hamIcon"></i>
+        <i class="fa-solid fa-close closeIcon"></i>
+      </div>
+
+      <div class="responsive-lap-mobile">
+        <div class="navbar-menu">
+          <a href="./" class="active2">Home</a>
+          <a href="./services.html">Services</a>
+          <a href="./blogs.html">Blogs</a>
+          <a href="./pricing.html">Pricing</a>
+          <a href="./contact.html" id="stopp">Contact</a>
         </div>
-
-        <div class="responsive-lap-mobile">
-            <div class="navbar-menu">
-                <a href="./" class="active2">Home</a>
-                <a href="./services.html">Services</a>
-                <a href="./blogs.html">Blogs</a>
-                <a href="./pricing.html">Pricing</a>
-                <a href="./contact.html" id="stopp">Contact</a>
-            </div>
-        </div>
-
+      </div>
     </div>
     <div class="navbar-adjuster"></div>
 
     <!-- fake height -->
-    <div class="fake-height"></div>
+    <!-- <div class="fake-height"></div> -->
 
     <!-- Fixed top container for the progress tracker -->
     <div class="progress-container overflow-control">
-        <div class="progress-bar" id="myProgressBar"></div>
+      <div class="progress-bar" id="myProgressBar"></div>
     </div>
 
+    <!-- home-one -->
+    <div class="home-one max-width-class">
+      <h6 data-aos="fade-down" data-aos-delay="300">
+        Affordable. Fast. Reliable. Creatively Digital.
+      </h6>
+
+      <h2 data-aos="fade-down" data-aos-delay="200">
+        Your Creative Partner, For Digital Growth.
+      </h2>
+
+      <h4 data-aos="fade-down" data-aos-delay="100">
+        Affordable, fast, and reliable digital marketing solutions designed to
+        grow your brand creatively.
+      </h4>
+
+      <a href="" data-aos="fade-down" data-aos-delay="400">
+        Give a Try
+        <div class="home-one-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- divdier -->
+    <div class="section-divider"></div>
+
+    <div class="home-one-sub">
+      <img data-aos="fade-down" data-aos-delay="1000"
+        id="hos-1"
+        src="https://images.pexels.com/photos/33611215/pexels-photo-33611215.jpeg"
+        alt="flight"
+      />
+
+      <div class="content">
+        <h2>98%</h2>
+        <p>Get more Done, Effortlessly.</p>
+      </div>
+
+      <img src="./favicon/favicon.png" alt="logo" id="hos-2" />
+    </div>
+
+    <!-- marquee -->
+    <div class="marquee-loop">
+      <div class="marquee-loop-track">
+        <div class="marquee-item">
+          Website Design & Web Application Development
+        </div>
+        <div class="marquee-item">
+          Search Engine Optimization (SEO) Services
+        </div>
+        <div class="marquee-item">Social Media Optimization (SMO) Services</div>
+        <div class="marquee-item">Social Media Marketing & Management</div>
+        <div class="marquee-item">
+          Digital Marketing Solutions for Growing Businesses
+        </div>
+        <div class="marquee-item">Performance Marketing & Paid Advertising</div>
+        <div class="marquee-item">Google Ads & Search Engine Marketing</div>
+        <div class="marquee-item">Meta Ads & Social Media Advertising</div>
+        <div class="marquee-item">Content Marketing & Creative Strategy</div>
+        <div class="marquee-item">Brand Strategy & Brand Development</div>
+        <div class="marquee-item">Professional Logo Design & Branding</div>
+        <div class="marquee-item">Corporate Identity & Visual Branding</div>
+        <div class="marquee-item">
+          UI/UX Design for Websites & Web Applications
+        </div>
+        <div class="marquee-item">Responsive Website Development</div>
+        <div class="marquee-item">E-Commerce Website Development</div>
+        <div class="marquee-item">
+          Local SEO & Google Business Profile Optimization
+        </div>
+        <div class="marquee-item">Online Reputation & Brand Management</div>
+        <div class="marquee-item">Social Media Content & Creative Design</div>
+        <div class="marquee-item">
+          Conversion-Focused Digital Marketing Strategies
+        </div>
+        <div class="marquee-item">
+          End-to-End Digital Marketing & Branding Solutions
+        </div>
+      </div>
+    </div>
+
+    <!-- divdier -->
+    <div class="section-divider"></div>
+
+    <!-- home two -->
+    <div class="home-two">
+      <h2>Unleashing online performance for brands that demand better</h2>
+      <a href="">
+        <div class="icons"><i class="fa-solid fa-arrow-right"></i></div>
+        <h4>Flying the Flag</h4>
+      </a>
+    </div>
+
+    <!-- divdier -->
+    <div class="section-divider"></div>
 
     <!-- footer -->
     <div class="footer">
-        <div class="footer-1">
-            <img src="./favicon/favicon.png" alt="logo">
+      <div class="footer-1">
+        <img
+          data-aos="fade-down"
+          data-aos-delay="100"
+          src="./favicon/favicon.png"
+          alt="logo"
+        />
+      </div>
+      <div class="footer-2">
+        <div class="head">Services</div>
+        <div class="lists">
+          <a data-aos="fade-down" data-aos-delay="100" href="./services.html"
+            >Services</a
+          >
+          <a data-aos="fade-down" data-aos-delay="200" href="./blogs.html"
+            >Blogs</a
+          >
+          <a data-aos="fade-down" data-aos-delay="300" href="./pricing.html"
+            >Pricing</a
+          >
+          <a data-aos="fade-down" data-aos-delay="400" href="./contact.html"
+            >Contact</a
+          >
         </div>
-        <div class="footer-2">
-            <div class="head">
-                Services
-            </div>
-            <div class="lists">
-                <a href="./services.html">Services</a>
-                <a href="./blogs.html">Blogs</a>
-                <a href="./pricing.html">Pricing</a>
-                <a href="./contact.html">Contact</a>
-            </div>
+      </div>
+
+      <div class="footer-2">
+        <div class="head">Services</div>
+        <div class="lists">
+          <a data-aos="fade-down" data-aos-delay="100" href="./services.html"
+            >Services</a
+          >
+          <a data-aos="fade-down" data-aos-delay="200" href="./blogs.html"
+            >Blogs</a
+          >
+          <a data-aos="fade-down" data-aos-delay="300" href="./pricing.html"
+            >Pricing</a
+          >
+          <a data-aos="fade-down" data-aos-delay="400" href="./contact.html"
+            >Contact</a
+          >
         </div>
+      </div>
 
-        <div class="footer-2">
-            <div class="head">
-                Services
-            </div>
-            <div class="lists">
-                <a href="./services.html">Services</a>
-                <a href="./blogs.html">Blogs</a>
-                <a href="./pricing.html">Pricing</a>
-                <a href="./contact.html">Contact</a>
-            </div>
+      <div class="footer-3">
+        <div class="head">Contact</div>
+
+        <div class="lists">
+          <a data-aos="fade-down" data-aos-delay="100" href=""> 9988776655 </a>
+          <a href="" data-aos="fade-down" data-aos-delay="200"> 1122334455 </a>
+          <a href="" data-aos="fade-down" data-aos-delay="300">
+            example@gmail.com
+          </a>
         </div>
+      </div>
 
-        <div class="footer-3">
-            <div class="head">
-                Contact
-            </div>
-
-            <div class="lists">
-                <a href="">
-                    9988776655
-                </a>
-                <a href="">
-                    1122334455
-                </a>
-                <a href="">
-                    example@gmail.com
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-4">
-            <a>
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a>
-                <i class="fas fa-phone"></i>
-            </a>
-            <a>
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a>
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-        </div>
+      <div class="footer-4">
+        <a>
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a>
+          <i class="fas fa-phone"></i>
+        </a>
+        <a>
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a>
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
     </div>
 
     <!-- last company logo -->
     <div class="company-footer">
-        <h2>SEITE.IN</h2>
+      <h2>SEITE.IN</h2>
     </div>
+  </body>
 
-
-
-</body>
-
-<!-- js codes -->
-<script src="./fa/fa.js"></script>
-<script src="./magic.js"></script>
-
+  <!-- js codes -->
+  <script src="./cdn/lenis.js"></script>
+  <script src="./cdn/fa.js"></script>
+  <script src="./cdn/aos.js"></script>
+  <script src="./magic.js"></script>
 </html>
