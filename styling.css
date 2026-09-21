@@ -711,7 +711,8 @@ a {
 
 @media screen and (max-width: 1700px) {
     .home-two h2 {
-        max-width: 70%;
+        max-width: 65%;
+        font-size: 3rem;
     }
 
     .home-two {
@@ -723,6 +724,11 @@ a {
     .home-two {
         padding-inline: 5%;
         gap: 1rem;
+    }
+
+    .home-two h2 {
+        max-width: 100%;
+        font-size: 2.25rem;
     }
 
 }
@@ -838,5 +844,233 @@ a {
 @media screen and (max-width : 1200px) {
     .marquee-loop {
         max-width: 90%;
+    }
+}
+
+/* ---------------------------- */
+/* zig-zag-section */
+
+.zig-zag-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.zzs-div {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.zzs-div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.zzs-div img {
+    min-width: 50%;
+    max-width: 50%;
+    clip-path: polygon(0% 0%,
+            70% 0%,
+            100% 50%,
+            70% 100%,
+            0% 100%,
+            30% 50%);
+    transition: all 1s ease !important;
+    object-fit: cover;
+    height: 400px;
+}
+
+.zzs-div:nth-child(even) img {
+    clip-path: polygon(30% 0%,
+            100% 0%,
+            70% 50%,
+            100% 100%,
+            30% 100%,
+            0% 50%);
+}
+
+.zzs-div .zzs-div-right h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: end;
+}
+
+.zzs-div .zzs-div-right p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: .5 !important;
+    text-align: end;
+}
+
+.zzs-div:nth-child(even) .zzs-div-right * {
+    text-align: left;
+}
+
+@media screen and (max-width: 1700px) {
+    .zig-zag-section {
+        max-width: 80%;
+    }
+
+    .zzs-div .zzs-div-right h2 {
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .zzs-div .zzs-div-right h2 {
+        font-size: 2.5rem;
+    }
+
+    .zig-zag-section {
+        max-width: 90%;
+    }
+
+    .zzs-div .zzs-div-right p {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .zzs-div .zzs-div-right h2 {
+        font-size: 1.75rem;
+        text-align: left;
+    }
+
+    .zzs-div,
+    .zzs-div:nth-child(even) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .zig-zag-section {
+        gap: 2rem;
+    }
+
+    .zzs-div .zzs-div-right p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .zzs-div img,
+    .zzs-div:nth-child(even) img {
+        height: 200px;
+        max-width: 100%;
+        width: 100%;
+        clip-path: none;
+        border-radius: 1rem;
+    }
+}
+
+/* ------------------------------ */
+/* professional-cta */
+
+.professional-cta {
+    max-width: 70%;
+    margin: auto;
+    height: min-content;
+    background: var(--linear1);
+    border-radius: 2rem;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.professional-cta>img {
+    max-width: 30%;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    transform: scaleX(-1);
+}
+
+.services-provided {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    max-width: 60%;
+    gap: 1rem;
+}
+
+.services-provided .ssp-div {
+    display: flex;
+    background-color: var(--white2);
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: .5rem;
+    align-items: center;
+    width: calc(50% - .5rem);
+    gap: 1rem;
+}
+
+.services-provided .ssp-div img {
+    max-width: 2rem;
+}
+
+.services-provided .ssp-div h2 {
+    font-size: 1.25rem;
+    line-height: 1.1;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .professional-cta {
+        max-width: 80%;
+    }
+
+    .services-provided .ssp-div h2 {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .professional-cta {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .services-provided .ssp-div {
+        gap: 1rem;
+    }
+
+    .services-provided{
+        gap: .75rem;
+    }
+
+    .services-provided .ssp-div h2 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .services-provided .ssp-div img {
+        max-width: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .professional-cta>img {
+        max-width: 40%;
+        display: none;
+    }
+
+    .professional-cta{
+        border-radius: 1rem;
+    }
+
+    .services-provided .ssp-div {
+        width: 100%;
+    }
+
+    .services-provided {
+        max-width: 100%;
+        gap: .5rem;
     }
 }
