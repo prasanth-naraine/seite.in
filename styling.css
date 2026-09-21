@@ -441,6 +441,13 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    position: relative;
+}
+
+.home-one img {
+    position: absolute;
+    width: 30%;
+    opacity: .09 !important;
 }
 
 .home-one * {
@@ -452,17 +459,21 @@ a {
     font-weight: 600;
     line-height: 1;
     max-width: 70%;
+    z-index: 10 !important;
 }
 
 .home-one h6 {
     font-style: italic;
     font-size: 1.5rem;
     opacity: .25 !important;
+    z-index: 10 !important;
+
 }
 
 .home-one h4 {
     font-size: 2rem;
     max-width: 60%;
+    z-index: 10 !important;
 }
 
 .home-one a {
@@ -474,6 +485,7 @@ a {
     border-radius: 2rem;
     font-weight: 600;
     /* color: var(--white2); */
+    z-index: 10 !important;
 }
 
 .home-one a .home-one-arrow {
@@ -566,6 +578,10 @@ a {
         border-radius: 2rem 2rem 0 0;
     }
 
+    .home-one img {
+        width: 60%;
+    }
+
     .home-one h4 {
         font-size: 1.5rem;
     }
@@ -619,6 +635,22 @@ a {
 
     .home-one-sub #hos-2 {
         max-width: 3rem;
+    }
+
+    .home-one img {
+        width: 80%;
+        opacity: .08 !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home-one h2 {
+        font-size: 1.75rem;
+    }
+
+
+    .home-one h4 {
+        font-size: 1.1rem;
     }
 }
 
