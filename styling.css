@@ -1206,7 +1206,7 @@ a {
 
 .swiper-articles .swiper-wrapper .swiper-slide {
     height: 100%;
-    background: var(--text1);
+    background: var(--gray3);
     overflow: hidden;
     padding: 2rem;
     display: flex;
@@ -1218,7 +1218,7 @@ a {
 .swiper-articles .swiper-wrapper .swiper-slide * {
     max-width: 100%;
     display: block !important;
-    color: var(--white2);
+    color: var(--text1);
     line-height: 1.35;
 }
 
