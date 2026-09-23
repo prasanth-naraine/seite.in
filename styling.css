@@ -13,6 +13,7 @@
     color: var(--text1);
     letter-spacing: -5% !important;
     font-weight: 300;
+    /* z-index: inherit !important; */
 }
 
 html,
@@ -50,6 +51,11 @@ a {
     --gray3: #e6e0e0;
 
     --linear1: linear-gradient(140deg, var(--alpha) 0%, var(--beta) 50%, var(--gamma) 100%);
+
+    --god: 1000;
+    --govt: 100;
+    --officer: 10;
+    --people: 0;
 }
 
 .max-width-class {
@@ -73,12 +79,12 @@ a {
 /* Fixed container along the very top edge */
 .progress-container {
     position: fixed;
-    top: 61px;
+    bottom: 0;
     left: 0%;
     width: 100%;
-    height: 4px;
+    height: 6px;
     background: var(--gray3);
-    z-index: 1000 !important;
+    z-index: var(--govt);
 }
 
 /* Animated active progress fill */
@@ -118,13 +124,15 @@ a {
     justify-content: space-between !important;
     padding: .65rem 15%;
     position: fixed;
-    z-index: 1000 !important;
+    z-index: var(--god);
+    border-bottom: 1px solid var(--gray3);
 }
 
 .navbar-adjuster {
     display: block;
     position: relative;
     height: 65px;
+    z-index: var(--people) !important;
 }
 
 .navbar-clickable {
@@ -138,7 +146,6 @@ a {
     align-items: center;
     justify-content: center;
     /* border: 1px solid red; */
-    z-index: 100000 !important;
 }
 
 .navbar-logo img {
@@ -168,7 +175,6 @@ a {
 
 .navbar .navbar-menu a {
     position: relative;
-    z-index: 100;
     font-size: 1rem;
     text-transform: capitalize;
     border-right: none;
@@ -180,6 +186,7 @@ a {
     font-weight: 400;
     cursor: pointer !important;
     transition: background .3s ease, color .7s ease;
+    border: 1px solid var(--text1) !important;
 }
 
 .navbar .navbar-menu a:hover {
@@ -191,9 +198,138 @@ a {
     background: var(--linear1) !important;
 }
 
+.services-dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.services-dropdown .services-link {
+    position: relative;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 0rem 1.1rem 0 1.25rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 1rem !important;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease;
+    border: 1px solid var(--text1) !important;
+}
+
+.services-dropdown .services-link:hover {
+    background: var(--linear1) !important;
+}
+
+/* Arrow */
+.services-link svg {
+    font-size: .75rem;
+    margin-top: .1rem;
+    font-weight: 900 !important;
+    transition: transform .3s ease;
+}
+
+/* Dropdown box */
+.services-dropdown-menu {
+    position: absolute;
+    top: -200vh;
+    left: 0;
+    width: max-content;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    /* background: red; */
+    padding-top: 1rem;
+}
+
+/* Dropdown links */
+.services-dropdown-menu a {
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    padding: .5rem 1.5rem !important;
+    border-radius: 1.25rem;
+    background: var(--white2) !important;
+    color: var(--text1) !important;
+    /* font-weight: 600 !important; */
+}
+
+.services-dropdown-menu a:hover {
+    background: var(--linear1) !important;
+    color: var(--text1) !important;
+}
+
+.services-dropdown:hover .services-link {
+    background: var(--linear1) !important;
+}
+
+/* Desktop hover */
+.services-dropdown:hover .services-dropdown-menu {
+    opacity: 1;
+    top: 22px;
+}
+
+.services-dropdown:hover .services-link svg {
+    transform: rotate(900deg);
+    transition: transform 1s ease;
+}
+
+.navbar * {
+    z-index: var(--god);
+}
+
+.navbar-blurry {
+    position: fixed !important;
+    min-height: calc(100vh - 60px);
+    top: 60px;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+
+    z-index: var(--people) !important;
+}
+
+.navbar:hover~.navbar-blurry {
+    opacity: 1;
+    visibility: visible;
+
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    z-index: var(--govt) !important;
+
+    transition:
+        opacity 0.4s ease,
+        backdrop-filter 0.4s ease,
+        visibility 0.3s ease !important;
+
+}
+
+body:hover .navbar:not(:hover) .navbar-blurry {
+    transition:
+        opacity 1s ease,
+        backdrop-filter .8s ease,
+        visibility 0.5s ease !important;
+}
+
 @media screen and (max-width: 1700px) {
     .navbar {
         padding-inline: 10%;
+    }
+
+    .services-dropdown-menu {
+        gap: .2rem;
     }
 }
 
@@ -203,6 +339,10 @@ a {
         padding: .5rem 5%;
     }
 
+    .navbar-blurry {
+        display: none !important;
+    }
+
     .responsive-lap-mobile {
         position: fixed;
         top: -200vh;
@@ -210,9 +350,9 @@ a {
         flex-direction: column;
         width: 100%;
         left: 0%;
+        z-index: var(--god);
         border-radius: 0rem;
-        z-index: 1000 !important;
-        max-height: 100dvh;
+        height: 100dvh;
         background: var(--white2) !important;
         padding-inline: 5%;
         padding-top: 85px;
@@ -231,6 +371,7 @@ a {
 
     .navbar-logo {
         font-size: 1.25rem;
+        z-index: var(--god);
     }
 
     .navbar-logo img {
@@ -240,7 +381,7 @@ a {
     .responsive-lap-mobile.active {
         top: 0;
         transition: top .5s ease;
-        z-index: 10000 !important;
+        z-index: var(--govt) !important;
     }
 
     .navbar .navbar-menu {
@@ -264,7 +405,7 @@ a {
         height: 100%;
         width: 50px;
         transition: transform .5s ease;
-        z-index: 100000 !important;
+        z-index: var(--god) !important;
     }
 
     .navbar-clickable * {
@@ -299,6 +440,65 @@ a {
     .navbar-clickable.active .closeIcon {
         opacity: 1;
         transform: rotate(0deg);
+    }
+
+    .services-dropdown {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .services-dropdown .services-link {
+        width: 100%;
+        height: 45px;
+        justify-content: center;
+        padding: .75rem .5rem;
+        border-radius: 1.25rem !important;
+    }
+
+    .services-dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-inline: auto;
+        min-width: 0;
+        transform: translateY(-10px);
+        box-shadow: none;
+        background: var(--white2);
+        display: none;
+    }
+
+    /* Opened by JS */
+    .services-dropdown.mobile-active .services-dropdown-menu {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        margin-top: .5rem;
+        padding-top: 0rem;
+        gap: .5rem;
+        border-radius: 0 !important;
+        border-left: 1px solid var(--text1);
+        max-width: 95%;
+    }
+
+    .services-dropdown-menu a {
+        padding: .75rem !important;
+        justify-content: center;
+        max-width: 97%;
+        margin-left: 3%;
+        /* border-radius: 0 1.25rem 1.25rem 0 !important; */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .services-dropdown.mobile-active .services-dropdown-menu {
+        max-width: 90%;
+    }
+
+    .services-dropdown-menu a {
+        max-width: 95%;
+        margin-left: 5%;
     }
 }
 
@@ -448,6 +648,7 @@ a {
     position: absolute;
     width: 30%;
     opacity: .09 !important;
+    z-index: var(--people);
 }
 
 .home-one * {
@@ -459,21 +660,17 @@ a {
     font-weight: 600;
     line-height: 1;
     max-width: 70%;
-    z-index: 10 !important;
 }
 
 .home-one h6 {
     font-style: italic;
     font-size: 1.5rem;
     opacity: .25 !important;
-    z-index: 10 !important;
-
 }
 
 .home-one h4 {
     font-size: 2rem;
     max-width: 60%;
-    z-index: 10 !important;
 }
 
 .home-one a {
@@ -485,7 +682,7 @@ a {
     border-radius: 2rem;
     font-weight: 600;
     /* color: var(--white2); */
-    z-index: 10 !important;
+    z-index: var(--officer) !important;
 }
 
 .home-one a .home-one-arrow {
@@ -522,7 +719,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    z-index: 1000 !important;
+    z-index: var(--officer) !important;
 }
 
 .home-one-sub .content * {

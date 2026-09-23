@@ -8,6 +8,24 @@ hamClose.addEventListener("click", function () {
     hamClose.classList.toggle("active");
 });
 
+// -------------------------------------------------------------------------
+// services dropdown
+const servicesDropdown = document.querySelector(".services-dropdown");
+const servicesLink = document.querySelector(".services-link");
+
+if (servicesDropdown && servicesLink) {
+
+    servicesLink.addEventListener("click", function (e) {
+
+        // Only use click-to-open on mobile/tablet
+        if (window.innerWidth <= 1200) {
+            e.preventDefault();
+
+            servicesDropdown.classList.toggle("mobile-active");
+        }
+
+    });
+}
 
 // -------------------------------------------------------------------------
 // Register scroll event listener on the global window
