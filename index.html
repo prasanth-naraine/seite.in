@@ -89,21 +89,25 @@
     </h2>
 
     <h4 data-aos="fade-down" data-aos-delay="100">
-      Need a website, SEO, social media, or ads for your business? SEITE does
-      it all in one place with affordable plans for businesses just starting
-      online, and flexible plans for those ready to grow bigger. No confusion,
-      no chasing. SEITE makes it simple: zero pressure, more clicks.
+      Need a website, SEO, social media, or ads for your business? <span>SEITE</span> does it all in one place with
+      affordable plans
+      for businesses just starting online, and flexible plans for those ready to grow bigger. No confusion, no chasing.
+
+      <br>
+      <br>
+
+      <span>SEITE</span> makes it simple: <span>zero pressure, more clicks.</span>
     </h4>
 
     <div class="cta-home-one">
-      <a href="" data-aos="fade-down" data-aos-delay="400">
+      <a href="./services/" data-aos="fade-down" data-aos-delay="400">
         Explore Services
         <div class="home-one-arrow">
           <i class="fa-solid fa-arrow-right"></i>
         </div>
       </a>
 
-      <a href="" data-aos="fade-down" data-aos-delay="400">
+      <a href="./contact.html" data-aos="fade-down" data-aos-delay="400">
         Contact Us
         <div class="home-one-arrow">
           <i class="fa-solid fa-arrow-right"></i>
@@ -111,22 +115,22 @@
       </a>
     </div>
 
-    <img src="./background/one.png" alt="background" />
+    <img src="./background/one.png" alt="background" data-aos="zoom-in" data-aos-delay="100" />
   </div>
 
   <!-- divdier -->
   <div class="section-divider"></div>
 
   <div class="home-one-sub">
-    <img data-aos="fade-down" data-aos-delay="1000" id="hos-1"
-      src="https://images.pexels.com/photos/33611215/pexels-photo-33611215.jpeg" alt="flight" />
-
+    <img data-aos="fade-down" data-aos-delay="500" id="hos-1" src="./background/five.jpg"
+      alt="Digital marketing growth and business success" />
     <div class="content">
-      <h2>98%</h2>
-      <p>Get more Done, Effortlessly.</p>
+      <h2 data-aos="fade-down" data-aos-delay="200">150%</h2>
+      <p data-aos="fade-down" data-aos-delay="400">More Output & Secure <br> At Same Price.</p>
     </div>
 
-    <img src="./favicon/favicon.png" alt="logo" id="hos-2" />
+    <img src="./favicon/favicon.png" data-aos="fade-down" data-aos-delay="600" alt="Your brand logo" id="hos-2" />
+
   </div>
 
   <!-- marquee -->
@@ -172,20 +176,63 @@
   <!-- divdier -->
   <div class="section-divider"></div>
 
-  <!-- home two -->
-  <div class="home-two">
-    <h2>Unleashing online performance for brands that demand better</h2>
-    <a href="">
-      <div class="icons"><i class="fa-solid fa-arrow-right"></i></div>
-      <h4>Flying the Flag</h4>
-    </a>
+  <div class="home-sticky-intro" id="audio-trigger-section">
+    <h1>Why We Started?</h1>
+    <p>
+      Too many businesses get talked into services they don't need, or priced out before they even begin. Starting
+      online feels harder than it should be. Where do you begin, a website first or social media? <span>Is SEO worth it
+      right
+      away?</span> Most businesses waste time and money guessing. SEITE was built to fix that with clear plans, honest
+      advice,
+      and support at every budget. So you get one clear plan instead of five confusing opinions.
+    </p>
+
+    <!-- The audio element -->
+    <audio id="my-audio" src="./mp3/vadivelu2.mp3"></audio>
+
   </div>
 
   <!-- divdier -->
   <div class="section-divider"></div>
 
+  <div class="home-sticky-core-values">
+    <div class="hscv-left">
+
+      <h4>Growing online shouldn't be hard. We made marketing simple.</h4>
+
+    </div>
+    <div class="hscv-right">
+      <div class="hscv-right-div">
+        <h2>01</h2>
+        <h4>Affordable for every budget</h4>
+        <h6>
+          Plans built around what you can spend, not a fixed package you're forced into.
+        </h6>
+      </div>
+
+      <div class="hscv-right-div">
+        <h2>02</h2>
+        <h4>Zero pressure, real support</h4>
+        <h6>
+          No pushy sales calls. Just honest guidance on what your business actually needs.
+        </h6>
+      </div>
+
+      <div class="hscv-right-div">
+        <h2>03</h2>
+        <h4>One place for everything</h4>
+        <h6>
+          Website, SEO, social media, content, design and ads. No juggling multiple vendors.
+        </h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- divdier -->
+  <!-- <div class="section-divider"></div> -->
+
   <!-- personal cta -->
-  <div class="professional-cta">
+  <!-- <div class="professional-cta">
     <div class="services-provided">
       <div class="ssp-div">
         <img src="https://www.libertymarketing.co.uk/wp-content/uploads/2023/11/training-consultancy.svg" alt="image" />
@@ -221,7 +268,7 @@
       </div>
     </div>
     <img src="./background/four.png" alt="professional-cta" />
-  </div>
+  </div> -->
 
   <!-- divdier -->
   <div class="section-divider"></div>
@@ -705,6 +752,42 @@
         slidesPerView: 3,
       },
     },
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const targetSection = document.getElementById("audio-trigger-section");
+    const audio = document.getElementById("my-audio");
+
+    // Keep track of whether the audio has already played during this specific intersection
+    let hasPlayedThisVisit = false;
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2, // Triggers when 20% of the section is visible
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Only play if it hasn't played yet during this visit
+          if (!hasPlayedThisVisit) {
+            audio.currentTime = 0; // Rewind audio to the start
+            audio.play().catch((err) => console.log("Autoplay blocked:", err));
+
+            hasPlayedThisVisit = true; // Lock playback until they leave
+          }
+        } else {
+          // Reset the flag when the user completely leaves the section
+          hasPlayedThisVisit = false;
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(targetSection);
   });
 </script>
 

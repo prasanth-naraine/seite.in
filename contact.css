@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 15% 0;
+    padding: 4rem 15% 0;
 }
 
 .contact-one * {
@@ -98,6 +98,10 @@
         max-width: 70%;
     }
 
+    .contact-one {
+        padding-top: 3rem;
+    }
+
     .contact-one,
     .relaxing {
         padding-inline: 10%;
@@ -122,6 +126,11 @@
     .relaxing {
         padding-inline: 5%;
     }
+
+    .contact-one {
+        padding-top: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
