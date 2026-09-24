@@ -55,10 +55,16 @@
             </a>
 
             <div class="services-dropdown-menu">
-              <a href="./services/search-engine-optimization.html">Search Engine Optimzations</a>
-              <a href="./services/website-development.html">Website Development</a>
-              <a href="./services/creatives-logos.html">Creatives & Postings</a>
-              <a href="./services/social-media-management.html">Social Media Management</a>
+              <a href="./services/website-development.html"
+                >Website Development</a
+              >
+              <a href="./services/search-engine-optimization.html"
+                >Search Engine Optimzation</a
+              >
+              <a href="./services/social-media-mareketing.html"
+                >Social Media Management</a
+              >
+              <a href="./services/creatives-logos.html">Logos & Creatives</a>
             </div>
           </div>
 
@@ -69,12 +75,32 @@
     <div class="navbar-adjuster"></div>
     <div id="navbar-blurry" class="navbar-blurry"></div>
 
-    <!-- fake height -->
-    <!-- <div class="fake-height"></div> -->
-
     <!-- Fixed top container for the progress tracker -->
     <div class="progress-container overflow-control">
       <div class="progress-bar" id="myProgressBar"></div>
+    </div>
+
+    <!-- whatsapp -->
+    <div class="whatsapp-hanging">
+      <a
+        href="tel:+919003194363"
+        target="_blank"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        class="phone"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+
+      <a
+        target="_blank"
+        href="https://wa.me/919003194363?text=Hi%20Seite%2C%20greetings!"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        class="what"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
 
     <!-- home-one -->
@@ -666,21 +692,30 @@
         <img
           data-aos="fade-down"
           data-aos-delay="100"
-          src="./favicon/favicon.png"
+          src="./logo/l-1.png"
           alt="logo"
         />
+        <p>
+          Seite is a digital marketing team helping businesses of every size
+          grow online, through websites, SEO, social media, and logo design.
+          Simple plans, honest pricing, no pressure.
+        </p>
       </div>
       <div class="footer-2">
-        <div class="head">Services</div>
+        <div class="head">Quick Links</div>
         <div class="lists">
-          <a data-aos="fade-down" data-aos-delay="100" href="./services.html"
+          <a data-aos="fade-down" data-aos-delay="100" href="./">Home</a>
+          <a data-aos="fade-down" data-aos-delay="300" href="./services/"
             >Services</a
           >
-          <a data-aos="fade-down" data-aos-delay="200" href="./blogs.html"
-            >Blogs</a
+          <a data-aos="fade-down" data-aos-delay="200" href="./about.html"
+            >About</a
           >
-          <a data-aos="fade-down" data-aos-delay="300" href="./pricing.html"
-            >Pricing</a
+          <a
+            data-aos="fade-down"
+            data-aos-delay="300"
+            href="./construction.html"
+            >Blogs</a
           >
           <a data-aos="fade-down" data-aos-delay="400" href="./contact.html"
             >Contact</a
@@ -691,18 +726,12 @@
       <div class="footer-2">
         <div class="head">Services</div>
         <div class="lists">
-          <a data-aos="fade-down" data-aos-delay="100" href="./services.html"
-            >Services</a
+          <a href="./services/website-development.html">Web Development</a>
+          <a href="./services/search-engine-optimization.html">SEO</a>
+          <a href="./services/social-media-marketing.html"
+            >Social Media Marketing</a
           >
-          <a data-aos="fade-down" data-aos-delay="200" href="./blogs.html"
-            >Blogs</a
-          >
-          <a data-aos="fade-down" data-aos-delay="300" href="./pricing.html"
-            >Pricing</a
-          >
-          <a data-aos="fade-down" data-aos-delay="400" href="./contact.html"
-            >Contact</a
-          >
+          <a href="./services/creatives-logos.html">Logo Design</a>
         </div>
       </div>
 
@@ -710,26 +739,47 @@
         <div class="head">Contact</div>
 
         <div class="lists">
-          <a data-aos="fade-down" data-aos-delay="100" href=""> 9988776655 </a>
-          <a href="" data-aos="fade-down" data-aos-delay="200"> 1122334455 </a>
-          <a href="" data-aos="fade-down" data-aos-delay="300">
-            example@gmail.com
+          <a
+            target="_blank"
+            href="https://wa.me/919003194363?text=Hi%20Seite%2C%20greetings!"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            >Ping Us</a
+          >
+
+          <a
+            target="_blank"
+            href="tel:9003194363"
+            data-aos="fade-down"
+            data-aos-delay="100"
+          >
+            Call Us
+          </a>
+
+          <a
+            target="_blank"
+            href="mailto:hello.seite@gmail.com?body=Hi%20Seite%2C%20greetings!"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
+            Mail Us
           </a>
         </div>
       </div>
 
-      <div class="footer-4">
+      <div class="footer-3 footer-3-social">
+        <div class="head">Follow Us On,</div>
         <a>
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a>
-          <i class="fas fa-phone"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          Linkedin
         </a>
         <a>
           <i class="fab fa-instagram"></i>
+          Instagram
         </a>
         <a>
           <i class="fab fa-facebook-f"></i>
+          Facebook
         </a>
       </div>
     </div>
@@ -748,7 +798,6 @@
   <script src="./magic.js"></script>
 
   <script>
-    // -------------------------------------------------------------------------
     const swiperOne = new Swiper(".swiper-articles", {
       loop: true,
       speed: 500,
