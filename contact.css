@@ -1,0 +1,165 @@
+/* --------------------- */
+/* contact-one */
+
+.contact-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 15% 0;
+}
+
+.contact-one * {
+    text-align: center;
+}
+
+.contact-one h2 {
+    margin-bottom: .25rem;
+    font-size: 3.5rem;
+    font-weight: 900 !important;
+}
+
+.contact-one p {
+    font-size: 2rem;
+    max-width: 60%;
+    font-style: italic;
+    opacity: .5 !important;
+}
+
+.relaxing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15%;
+}
+
+.relaxing img {
+    max-width: 100%;
+}
+
+.relaxing h2 {
+    max-width: 50%;
+    margin-bottom: 2rem;
+}
+
+.relaxing h2,
+.relaxing h2 span {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.relaxing h2 span {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.relaxing a {
+    background: var(--linear1);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: .5rem .6rem .5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    /* color: var(--white2); */
+    z-index: var(--officer) !important;
+    max-width: max-content;
+}
+
+.relaxing a .home-one-arrow {
+    background: var(--white2);
+    padding: .5rem;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform .25s ease;
+}
+
+.relaxing a:hover .home-one-arrow {
+    transform: rotate(-360deg);
+}
+
+.relaxing a:hover {
+    background: var(--text1);
+    color: var(--white2);
+}
+
+@media screen and (max-width: 1700px) {
+    .contact-one h2 {
+        font-size: 3.25rem;
+    }
+
+    .contact-one p {
+        font-size: 1.5rem;
+        max-width: 70%;
+    }
+
+    .relaxing h2 {
+        max-width: 70%;
+    }
+
+    .contact-one,
+    .relaxing {
+        padding-inline: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-one h2 {
+        font-size: 3rem;
+    }
+
+    .contact-one p {
+        font-size: 1.25rem;
+        max-width: 100%;
+    }
+
+    .relaxing h2 {
+        max-width: 90%;
+    }
+
+    .contact-one,
+    .relaxing {
+        padding-inline: 5%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact-one h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .contact-one p {
+        font-size: 1.2rem;
+    }
+
+    .relaxing h2 {
+        margin-block: 1rem;
+    }
+
+    .relaxing h2,
+    .relaxing h2 span {
+        font-size: 1.25rem;
+    }
+
+    .relaxing h2 {
+        max-width: 100%;
+    }
+
+    .relaxing a {
+        gap: 1rem;
+        padding: .4rem .5rem .4rem 1.25rem;
+        border-radius: 1.5rem;
+    }
+
+    .relaxing a .home-one-arrow {
+        padding: .35rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contact-one h2 {
+        font-size: 1.35rem;
+    }
+}

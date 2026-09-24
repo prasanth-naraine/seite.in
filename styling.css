@@ -16,6 +16,12 @@
     /* z-index: inherit !important; */
 }
 
+@media screen and (max-width: 800px) {
+    * {
+        letter-spacing: -3.5% !important;
+    }
+}
+
 html,
 body {
     background-color: #fff;
@@ -976,7 +982,6 @@ a {
         font-size: 1.75rem;
     }
 
-
     .home-one h4 {
         font-size: 1.1rem;
     }
@@ -1414,10 +1419,10 @@ a {
 }
 
 .metrics h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 }
 
 .metrics-values-main {
@@ -1433,7 +1438,7 @@ a {
 }
 
 .metrics-values-main .mvm-div h4 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     background: var(--linear1);
     background-clip: text;
     color: transparent;
@@ -1442,7 +1447,7 @@ a {
 }
 
 .metrics-values-main .mvm-div h5 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: .75rem auto 1rem;
 }
 
@@ -1463,6 +1468,10 @@ a {
 
     .metrics h2 {
         font-size: 2.5rem;
+    }
+
+    .metrics-values-main .mvm-div p {
+        font-size: 1.15rem;
     }
 }
 
@@ -1718,7 +1727,7 @@ a {
     /* color: transparent;
     background: var(--linear1);
     background-clip: text; */
-    font-weight: 600;   
+    font-weight: 600;
 }
 
 .q-a-div.active .a {
