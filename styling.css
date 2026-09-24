@@ -48,7 +48,7 @@ a {
 
     --text1: #191c20;
     --white2: #fff;
-    --gray3: #e6e0e0;
+    --gray3: #eeeeee;
 
     --linear1: linear-gradient(140deg, var(--alpha) 0%, var(--beta) 50%, var(--gamma) 100%);
 
@@ -557,7 +557,8 @@ a {
     padding: 3rem 15% 2rem;
     gap: 2rem;
     justify-content: space-between;
-    border-top: 1px solid var(--gray3);
+    /* border-top: 1px solid var(--text1); */
+    background: var(--gray3);
 }
 
 .footer-1 img {
@@ -593,7 +594,7 @@ a {
     font-weight: 600;
     /* color: red; */
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--gray3);
+    border-bottom: 1px solid gainsboro;
 }
 
 .footer-2 .lists,
@@ -639,6 +640,7 @@ a {
     justify-content: center;
     margin: 0rem !important;
     overflow: hidden;
+    background: var(--gray3);
 }
 
 .company-footer h2 {
@@ -1708,13 +1710,15 @@ a {
 
 /* OPEN STATE */
 .q-a-div.active {
-    background: var(--secondary);
-    border-color: var(--black1);
+    background: var(--gray3);
+    border-color: var(--text1);
 }
 
 .q-a-div.active .q {
-    color: red;
-    /* font-weight: 600 !important; */
+    /* color: transparent;
+    background: var(--linear1);
+    background-clip: text; */
+    font-weight: 600;   
 }
 
 .q-a-div.active .a {
