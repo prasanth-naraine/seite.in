@@ -109,3 +109,19 @@ faqItems.forEach(item => {
     });
 
 });
+
+// Cookies
+const cookies = document.querySelector(".cookies");
+const buttons = document.querySelectorAll(".cookies-cta a");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        cookies.classList.add("cookies-active");
+
+        localStorage.setItem("cookiesSeen", "true");
+    });
+});
+
+if (localStorage.getItem("cookiesSeen")) {
+    cookies.classList.add("cookies-active");
+}
