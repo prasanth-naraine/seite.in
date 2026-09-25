@@ -50,7 +50,7 @@
     bottom: -5%;
 
     width: 104%;
-    height: 30px;
+    height: 15px;
 
     background: var(--linear1);
 
@@ -79,7 +79,7 @@
     }
 
     .about-one-left h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
         font-weight: 900;
     }
@@ -99,7 +99,7 @@
     }
 
     .about-one-left p span::after {
-        height: 22px;
+        height: 12px;
         opacity: .6;
         /* filter: blur(6px); */
     }
