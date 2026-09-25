@@ -57,7 +57,7 @@
     z-index: -1;
     /* border-radius: 1rem; */
     opacity: .5;
-    filter: blur(5px);
+    /* filter: blur(5px); */
 
     /* transform: rotate(-2deg); */
     transform-origin: center;
@@ -95,13 +95,13 @@
     }
 
     .about-one-right {
-        height: 300px;
+        height: 250px;
     }
 
     .about-one-left p span::after {
         height: 22px;
         opacity: .6;
-        filter: blur(6px);
+        /* filter: blur(6px); */
     }
 
     .about-one-right img {
