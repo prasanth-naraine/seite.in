@@ -732,11 +732,11 @@ a {
     }
 
     .company-footer h2 {
-        font-size: 22vw;
+        font-size: 20vw;
     }
 
     .company-footer {
-        padding-bottom: 5rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -1589,6 +1589,7 @@ a {
     margin: auto;
     height: max-content;
     padding-top: 4.5rem;
+    display: none;
 }
 
 .swiper-articles .swiper-wrapper {
