@@ -73,6 +73,7 @@ a {
     height: 4rem;
     max-width: 100%;
     overflow: hidden;
+    /* background: var(--linear1); */
 }
 
 @media screen and (max-width: 1200px) {
@@ -1585,7 +1586,7 @@ a {
     }
 
     .metrics-values-main .mvm-div h4 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .metrics-values-main .mvm-div h5 {
@@ -2235,12 +2236,57 @@ a {
         font-size: 2.5rem;
     }
 
-    .cookies-cta a{
+    .cookies-cta a {
         padding-block: .5rem;
     }
 
     .cookies .cookies-container h2::after,
     .cookies .cookies-container h4::after {
         height: 12px;
+    }
+}
+
+/* ------------------------ */
+/* construction */
+
+.construction {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    align-items: center;
+    margin: auto;
+}
+
+.construction img {
+    max-width: 600px;
+}
+
+.construction * {
+    text-align: center;
+}
+
+.construction h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0 auto 1rem;
+}
+
+.construction p {
+    max-width: 50%;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .construction h1 {
+        font-size: 1.25rem;
+    }
+
+    .construction p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .construction img {
+        max-width: 100%;
     }
 }
