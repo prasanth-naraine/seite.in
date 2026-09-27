@@ -1233,7 +1233,7 @@ a {
     opacity: .5;
 }
 
-.zzs-div .zzs-div-right a:hover{
+.zzs-div .zzs-div-right a:hover {
     background: var(--gray3);
     border: 1px solid var(--text1);
 }
@@ -2302,5 +2302,114 @@ a {
 
     .construction img {
         max-width: 100%;
+    }
+}
+
+/* ---------------------- */
+/* final-home-cta */
+
+.final-home-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 70%;
+    background: var(--linear1);
+    padding: 2rem 5%;
+    border-radius: 1rem;
+    margin: auto;
+    gap: .5rem;
+}
+
+.final-home-cta * {
+    text-align: center;
+}
+
+.final-home-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.final-home-cta p {
+    font-size: 1.5rem;
+}
+
+.final-home-cta a {
+    background: var(--text1);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: .5rem .6rem .5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    z-index: var(--officer) !important;
+    max-width: max-content;
+}
+
+.final-home-cta a {
+    color: var(--white2) !important;
+}
+
+.final-home-cta a .home-one-arrow {
+    background: var(--white2);
+    padding: .5rem;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform .25s ease;
+}
+
+.final-home-cta a:hover .home-one-arrow {
+    transform: rotate(-360deg);
+}
+
+@media screen and (max-width: 1700px) {
+    .final-home-cta {
+        max-width: 80%;
+    }
+
+    .final-home-cta p {
+        font-size: 1.25rem;
+    }
+
+    .final-home-cta h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .final-home-cta {
+        max-width: 90%;
+    }
+
+    .final-home-cta p {
+        font-size: 1.1rem;
+    }
+
+    .final-home-cta h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .final-home-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .final-home-cta{
+        gap: 1rem;
+        padding: 1.5rem 5%;
+        border-radius: .5rem;
+    }
+
+    .final-home-cta a {
+        padding: .65rem 1.25rem;
+    }
+
+    .final-home-cta a .home-one-arrow {
+        display: none;
+    }
+
+    .final-home-cta p {
+        font-size: 1rem;
     }
 }
