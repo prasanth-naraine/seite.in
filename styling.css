@@ -869,7 +869,7 @@ a {
 }
 
 .home-one-sub .content h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
 }
 
@@ -904,6 +904,10 @@ a {
     .home-one-sub {
         max-width: 80%;
     }
+
+    .home-one-sub .content h2 {
+        font-size: 4rem;
+    }
 }
 
 @media screen and (max-width : 1200px) {
@@ -933,6 +937,10 @@ a {
 
     .home-one h6 {
         font-size: 1.25rem;
+    }
+
+    .home-one-sub .content h2 {
+        font-size: 3.5rem;
     }
 
 }
@@ -971,7 +979,7 @@ a {
     }
 
     .home-one-sub .content h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .home-one-sub .content p {
@@ -1185,11 +1193,12 @@ a {
 
 .zzs-div .zzs-div-right a {
     background: var(--linear1);
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
     border-radius: 2rem;
     display: block;
     max-width: max-content;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    border: 1px solid transparent;
 }
 
 .zzs-div:nth-child(even) .zzs-div-right * {
@@ -1222,6 +1231,11 @@ a {
     font-style: italic;
     margin: .5rem 0 2rem;
     opacity: .5;
+}
+
+.zzs-div .zzs-div-right a:hover{
+    background: var(--gray3);
+    border: 1px solid var(--text1);
 }
 
 @media screen and (max-width: 1700px) {
