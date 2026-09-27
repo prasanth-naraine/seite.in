@@ -177,8 +177,13 @@
 } */
 
 .mv-div-right {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.5;
+}
+
+.mv-div-right span{
+    font-weight: 600;
+    font-size: inherit;
 }
 
 @media screen and (max-width: 1700px) {
@@ -192,7 +197,7 @@
     }
 
     .mv-div-right {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -202,9 +207,6 @@
         padding: 1.5rem 1rem;
     }
 
-    .mv-div-right {
-        font-size: 1.5rem;
-    }
 }
 
 @media screen and (max-width: 800px) {
