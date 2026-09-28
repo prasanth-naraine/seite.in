@@ -2128,7 +2128,7 @@ a {
 
 .cookies .cookies-container {
     position: relative;
-    width: min(80%, 400px);
+    width: min(90%, 400px);
     padding: 1.5rem 1rem;
     border: 2px solid var(--text1);
     background: var(--gray3);
@@ -2257,6 +2257,11 @@ a {
     .cookies .cookies-container h2::after,
     .cookies .cookies-container h4::after {
         height: 12px;
+    }
+
+    .cookies{
+        align-items: flex-end;
+        padding-bottom: 3dvh;
     }
 }
 
