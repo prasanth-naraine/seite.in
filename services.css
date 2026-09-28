@@ -99,6 +99,10 @@
     text-align: center;
 }
 
+.servies-value h2 br {
+    display: none;
+}
+
 .servies-value h2 {
     font-size: 5rem;
     font-weight: 900;
@@ -161,6 +165,10 @@
 @media screen and (max-width: 800px) {
     .servies-value h2 {
         font-size: 1.75rem;
+    }
+
+    .servies-value h2 br {
+        display: block;
     }
 
     .servies-value .img-div {
