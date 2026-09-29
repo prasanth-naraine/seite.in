@@ -560,7 +560,7 @@
 }
 
 .sec-07-div:nth-child(2)::after {
-    content: 'best seller';
+    content: 'Most Popular';
     position: absolute;
     right: -2px;
     padding: .5rem 1rem;
@@ -611,6 +611,12 @@
     font-size: inherit;
 }
 
+.price-note{
+    /* background: red; */
+    margin-top: 2rem;
+    font-weight: 900;
+}
+
 .price-2::after {
     content: "Recurring Payment";
 }
@@ -620,7 +626,7 @@
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .values-given p {
@@ -767,7 +773,8 @@
     opacity: 1;
     transform: scale(1);
     transition: all 1s ease;
-    background: linear-gradient(0, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url(./background/ten.jpg) no-repeat 50% 50%;
+    background: var(--linear1);
+    /* background: linear-gradient(0, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url(./background/ten.jpg) no-repeat 50% 50%; */
     background-size: cover;
     border: 3px solid gainsboro;
 }
