@@ -423,6 +423,14 @@
     line-height: 1.5;
 }
 
+.service-inner-one p span {
+    font-size: inherit;
+    /* font-weight: 900; */
+    /* font-style: italic; */
+    /* opacity: .5; */
+    color: red;
+}
+
 .service-inner-one img {
     display: block !important;
     height: 550px;
@@ -604,6 +612,7 @@
     width: 10rem;
     opacity: .25;
     text-transform: capitalize;
+    display: none;
 }
 
 .price span {
@@ -611,9 +620,9 @@
     font-size: inherit;
 }
 
-.price-note{
+.price-note {
     /* background: red; */
-    margin-top: 2rem;
+    margin-top: .5rem;
     font-weight: 900;
 }
 
@@ -699,7 +708,7 @@
 
     .values-given {
         gap: .5rem;
-        margin-block: 2rem .75rem;
+        margin-block: .5rem .75rem;
     }
 
     .price {
