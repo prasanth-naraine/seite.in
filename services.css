@@ -99,12 +99,8 @@
     text-align: center;
 }
 
-.servies-value h2 br {
-    display: none;
-}
-
 .servies-value h2 {
-    font-size: 5rem;
+    font-size: 3.25rem;
     font-weight: 900;
 }
 
@@ -139,7 +135,7 @@
 
 @media screen and (max-width: 1700px) {
     .servies-value h2 {
-        font-size: 4rem;
+        font-size: 2.75rem;
     }
 
     .servies-value {
@@ -153,7 +149,7 @@
 
 @media screen and (max-width: 1200px) {
     .servies-value h2 {
-        font-size: 3rem;
+        font-size: 2.25rem;
     }
 
     .servies-value {
@@ -164,11 +160,7 @@
 
 @media screen and (max-width: 800px) {
     .servies-value h2 {
-        font-size: 1.75rem;
-    }
-
-    .servies-value h2 br {
-        display: block;
+        font-size: 1.7rem;
     }
 
     .servies-value .img-div {
@@ -189,6 +181,12 @@
 
     .servies-value h6 {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .servies-value h2 {
+        font-size: 1.5rem;
     }
 }
 
