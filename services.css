@@ -772,8 +772,9 @@
     padding: 2rem;
     border-radius: 2rem;
     transform: scale(.97);
+    opacity: .1;
     transition: all 1s ease;
-    background: var(--gray3);
+    background: var(--text1);
     border: 3px solid transparent;
 }
 
@@ -785,7 +786,7 @@
     background: var(--linear1);
     /* background: linear-gradient(0, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url(./background/ten.jpg) no-repeat 50% 50%; */
     background-size: cover;
-    border: 3px solid gainsboro;
+    border: 3px solid var(--text1);
 }
 
 .service .swiper-slide h2 {
@@ -875,5 +876,157 @@
 @media screen and (max-width: 800px) {
     .service h3 {
         font-size: 1.5rem;
+    }
+}
+
+/* ------------------------ */
+/* golden-paid */
+
+.golden-paid {
+    background-color: var(--alpha);
+    /* Smooth 3-second transition for the background change */
+    transition: background-color 3s ease-in-out;
+    padding: 3rem 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.golden-paid * {
+    text-align: center;
+}
+
+.golden-paid h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--white2);
+}
+
+.golden-paid p {
+    font-size: 1.5rem;
+    font-weight: 900;
+    opacity: .5;
+    max-width: 80%;
+    font-style: italic;
+    color: var(--white2);
+}
+
+.golden-paid .golden-paid-features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.golden-paid .golden-paid-features span {
+    background: var(--white2);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+
+.golden-paid .premium-label {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 900;
+}
+
+.golden-paid a {
+    background: var(--white2);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: .5rem .6rem .5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 900;
+    z-index: var(--officer) !important;
+    max-width: max-content;
+    color: var(--text1) !important;
+}
+
+.golden-paid a .home-one-arrow {
+    background: var(--text1);
+    padding: .5rem;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform .25s ease;
+}
+
+.golden-paid a .home-one-arrow * {
+    color: var(--white2) !important;
+}
+
+.golden-paid a:hover .home-one-arrow {
+    transform: rotate(-360deg);
+}
+
+@media screen and (max-width: 1700px) {
+    .golden-paid {
+        padding: 2rem 10%;
+    }
+
+    .golden-paid h2 {
+        font-size: 2.25rem;
+    }
+
+    .golden-paid p {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .golden-paid {
+        padding: 2rem 5%;
+    }
+
+    .golden-paid h2 {
+        font-size: 2rem;
+    }
+
+    .golden-paid p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .golden-paid h2 {
+        font-size: 1.5rem;
+    }
+
+    .golden-paid {
+        gap: 1rem;
+    }
+
+    .golden-paid p {
+        max-width: 100%;
+    }
+
+    .golden-paid a {
+        gap: 1rem;
+        font-size: .8rem;
+        padding: .65rem 1.75rem;
+    }
+
+    .golden-paid .home-one-arrow {
+        display: none;
+    }
+
+    .golden-paid .golden-paid-features {
+        gap: .25rem .15rem;
+    }
+
+    .golden-paid .golden-paid-features span {
+        padding: .5rem 1rem;
+        font-size: .75rem;
+        width: calc(50% - .075rem);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .golden-paid .golden-paid-features span {
+        font-size: .65rem;
     }
 }

@@ -115,11 +115,11 @@
       From Instagram marketing, Facebook marketing, to LinkedIn marketing, our social media management services keep you
       visible and consistent, without a rigid, expensive package.
 
-      <br>
+      <!-- <br>
       <br>
 
       <span>Note: Existing social media accounts are required to start. Don't have one? We can set it up for you at an
-        additional charge.p for you at an additional charge.</span>
+        additional charge.p for you at an additional charge.</span> -->
     </p>
     <img data-aos="fade-up" data-aos-delay="300" src="../background/sixteen.avif" alt="bg">
   </div>
@@ -338,6 +338,28 @@
   <!-- divdier -->
   <div class="section-divider"></div>
 
+  <!-- Golden Section -->
+  <div class="golden-paid">
+    <!-- <span class="premium-label">Beyond Standard Packages</span> -->
+    <h2 data-aos="fade-up" data-aos-delay="400"> Need More Than the Standard Package? </h2>
+    <div class="golden-paid-features" data-aos="fade-up" data-aos-delay="600">
+      <span>Custom Campaigns</span> <span>Paid Advertising</span> <span>Flexible Budgets</span> <span>Tailored
+        Strategy</span>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="200"> We also take care of paid promotions & advertising — tailored to your requirements, goals, and budget. If you’re
+      looking for something more customized, we can build a premium promotion strategy around your brand.
+    </p>
+    <a target="_blank"
+      href="https://wa.me/919003194363?text=Hi%20Seite%20Team!%20I'm%20interested%20in%20the%20Social%20Media%20Management%20Customized%20Plan.%20Could%20someone%20from%20your%20team%20please%20contact%20me%3F%20Thank%20you."
+      data-aos="fade-down" data-aos-delay="400"> Explore Custom Options <div class="home-one-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </a>
+  </div>
+
+  <!-- divdier -->
+  <div class="section-divider"></div>
+
   <!-- FAQ -->
   <div class="faq-heading" data-aos="fade-up" data-aos-delay="200">
     Frequently Asked Questions
@@ -465,6 +487,25 @@
 <script src="../magic.js"></script>
 <script src="../services.js"></script>
 
-</body>
+<script>
+  // Target the container using your class name
+  const container = document.querySelector('.golden-paid');
+
+  // Array using your custom CSS variable names
+  const colors = ['var(--alpha)', 'var(--beta)', 'var(--gamma)'];
+  let currentIndex = 0;
+
+  function changeBackgroundColor() {
+    // Move to the next color in the array, looping back to 0 at the end
+    currentIndex = (currentIndex + 1) % colors.length;
+
+    // Apply the new CSS variable color
+    container.style.backgroundColor = colors[currentIndex];
+  }
+
+  // Trigger the change every 3000 milliseconds (3 seconds)
+  setInterval(changeBackgroundColor, 3000);
+</script>
+
 
 </html>
