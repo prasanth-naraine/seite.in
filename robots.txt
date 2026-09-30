@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seite.in/sitemap.xml
+
+# AI-readable business information
+llms: https://seite.in/llms.txt
