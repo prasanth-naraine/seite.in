@@ -1,0 +1,2 @@
+ErrorDocument 404 https://seite.in/construction.html
+ErrorDocument 500 https://seite.in/construction.html
